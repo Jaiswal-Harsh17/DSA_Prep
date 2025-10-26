@@ -1,3 +1,5 @@
+// Check ehether a number is armstrong or not
+
 #include<iostream>
 #include<math.h>
 using namespace std;
