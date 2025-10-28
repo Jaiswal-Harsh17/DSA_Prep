@@ -1,4 +1,4 @@
-// Check ehether a number is armstrong or not
+// Write a program to check whether a number is armstrong or not
 
 #include<iostream>
 #include<math.h>
