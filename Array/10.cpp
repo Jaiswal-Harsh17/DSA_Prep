@@ -12,3 +12,15 @@ int main(){
     cout<<x-1;
     return 0;
 }
+
+// Leetcode Question - 1526
+
+class Solution {
+public:
+    int minNumberOperations(vector<int>& target) {
+        int count = target[0];
+        for (int i = 1; i < target.size(); i++)
+            count += max(target[i] - target[i - 1], 0);
+        return count;
+    }
+};
