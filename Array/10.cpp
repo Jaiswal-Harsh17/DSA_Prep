@@ -15,12 +15,31 @@ int main(){
 
 // Leetcode Question - 1526
 
+// class Solution {
+// public:
+//     int minNumberOperations(vector<int>& target) {
+//         int count = target[0];
+//         for (int i = 1; i < target.size(); i++)
+//             count += max(target[i] - target[i - 1], 0);
+//         return count;
+//     }
+// };
+
+// Leetcode Question - 3289
+
 class Solution {
 public:
-    int minNumberOperations(vector<int>& target) {
-        int count = target[0];
-        for (int i = 1; i < target.size(); i++)
-            count += max(target[i] - target[i - 1], 0);
-        return count;
+    vector<int> getSneakyNumbers(vector<int>& nums) {
+        unordered_map<int,int>mpp;
+        vector<int>ans;
+        for(int num:nums){
+            mpp[num]++;
+        }
+        for(auto it:mpp){
+            if(it.second > 1){
+                ans.push_back(it.first);
+            }
+        }
+        return ans;
     }
 };
