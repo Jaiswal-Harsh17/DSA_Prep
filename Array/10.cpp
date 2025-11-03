@@ -27,22 +27,22 @@ int main(){
 
 // Leetcode Question - 3289
 
-class Solution {
-public:
-    vector<int> getSneakyNumbers(vector<int>& nums) {
-        unordered_map<int,int>mpp;
-        vector<int>ans;
-        for(int num:nums){
-            mpp[num]++;
-        }
-        for(auto it:mpp){
-            if(it.second > 1){
-                ans.push_back(it.first);
-            }
-        }
-        return ans;
-    }
-};
+// class Solution {
+// public:
+//     vector<int> getSneakyNumbers(vector<int>& nums) {
+//         unordered_map<int,int>mpp;
+//         vector<int>ans;
+//         for(int num:nums){
+//             mpp[num]++;
+//         }
+//         for(auto it:mpp){
+//             if(it.second > 1){
+//                 ans.push_back(it.first);
+//             }
+//         }
+//         return ans;
+//     }
+// };
 
 // Leetcode - 3217
 
@@ -56,32 +56,33 @@ public:
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
-class Solution {
-public:
-    ListNode* modifiedList(vector<int>& nums, ListNode* head) {
-        int n = nums.size();
-        unordered_map<int,bool>mpp;
-        for(int i=0;i<n;i++){
-            mpp[nums[i]] = true;
-        }
-        ListNode* temp = head;
-        ListNode* InitTemp;
-        bool flag = false;
-        while(temp != NULL){
-            if(!mpp[temp->val]){
-                if(!flag){
-                    flag = true; 
-                    head = temp;
-                    InitTemp = head;
-                }
-                else{
-                    InitTemp->next = temp;
-                    InitTemp = temp;
-                }
-            }
-            temp = temp->next;
-        }
-        InitTemp->next = NULL;
-        return head;
-    }
-};
+// class Solution {
+// public:
+//     ListNode* modifiedList(vector<int>& nums, ListNode* head) {
+//         int n = nums.size();
+//         unordered_map<int,bool>mpp;
+//         for(int i=0;i<n;i++){
+//             mpp[nums[i]] = true;
+//         }
+//         ListNode* temp = head;
+//         ListNode* InitTemp;
+//         bool flag = false;
+//         while(temp != NULL){
+//             if(!mpp[temp->val]){
+//                 if(!flag){
+//                     flag = true; 
+//                     head = temp;
+//                     InitTemp = head;
+//                 }
+//                 else{
+//                     InitTemp->next = temp;
+//                     InitTemp = temp;
+//                 }
+//             }
+//             temp = temp->next;
+//         }
+//         InitTemp->next = NULL;
+//         return head;
+//     }
+// };
+
