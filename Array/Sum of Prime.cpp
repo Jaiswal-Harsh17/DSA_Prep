@@ -1,3 +1,4 @@
+// Sum of Prime
 #include<bits/stdc++.h>
 using namespace std;
 bool isPrime(int num){
