@@ -14,5 +14,16 @@
 
 // 02/12/2025
 
-// 3097. Shortest Subarray With OR at Least K II
+// 171. Excel Sheet Column Number
 // Code:
+// class Solution {
+// public:
+//     int titleToNumber(string columnTitle) {
+//         long long res = 0;
+//         for(char ch:columnTitle){
+//             int value = ch - 'A' + 1;
+//             res = res * 26 + value;
+//         }
+//         return res;
+//     }
+// };
