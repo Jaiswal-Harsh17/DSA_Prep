@@ -27,3 +27,28 @@
 //         return res;
 //     }
 // };
+
+// 2211. Count Collisions on a Road
+// Code:
+// class Solution {
+// public:
+//     int countCollisions(string directions) {
+//         int n = directions.length();
+//         int i = 0;
+//         while(i<n && directions[i] == 'L'){
+//             i++;
+//         } 
+//         int j = n-1;
+//         while(j>=0 && directions[j] == 'R'){
+//             j--;
+//         }
+//         int count = 0;
+//         while(i <= j){
+//             if(directions[i] != 'S'){
+//                 count += 1;
+//             }
+//             i++;
+//         }
+//         return count;
+//     } 
+// };
