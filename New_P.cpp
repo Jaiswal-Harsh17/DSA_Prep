@@ -126,3 +126,21 @@
 // Code:
 // # Write your MySQL query statement below
 // Select distinct viewer_id as id from Views where author_id = viewer_id order by id;  
+
+// 525. Contiguous Array
+// Code:
+// class Solution {
+// public:
+//     int findMaxLength(vector<int>& nums) {
+//         unordered_map<int, int> map {{0, -1}};
+//         int sum = 0, ans=0;
+//         for (int i=0; i<nums.size(); i++) {
+//             sum += (nums[i] ? 1 : -1);
+//             if (map.find(sum) != map.end()) {
+//                 ans = max (ans, i-map[sum]);
+//             }
+//             else map[sum] = i;
+//         }
+//         return ans;
+//     }
+// };
