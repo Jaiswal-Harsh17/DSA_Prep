@@ -144,3 +144,27 @@
 //         return ans;
 //     }
 // };
+
+// 2178. Maximum Split of Positive Even Integers
+// Code:
+// class Solution {
+// public:
+//     vector<long long> maximumEvenSplit(long long finalSum) {
+//         vector<long long> result;
+//         if (finalSum % 2 != 0) {
+//             return {};
+//         }
+//         long long res = 2;
+//         while (finalSum >= res) {
+//             result.push_back(res);
+
+//             finalSum = finalSum - res;
+//             res = res+ 2;
+//         }
+//         if(finalSum>0){
+            
+//             result.back() = result.back()+finalSum;
+//         }
+//         return result;
+//     }
+// };
