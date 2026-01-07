@@ -385,3 +385,26 @@
 
 // 93. Restore IP Addresses
 // Code:
+
+
+// 3301. Maximize the Total Height of Unique Towers
+// Code:
+// class Solution {
+// public:
+//     long long maximumTotalSum(vector<int>& maximumHeight) {
+//         sort(maximumHeight.begin(), maximumHeight.end());
+//         int n = maximumHeight.size();
+//         long long ans=0;
+//         int prev=maximumHeight[n-1]+1, h=-1;
+//         for(int i=n-1; i>=0; i--){
+//             h = maximumHeight[i];
+//             if(prev <= h ){
+//                 h = prev - 1;
+//             }
+//             if(h == 0) return -1;
+//             ans +=h;
+//             prev = h;
+//         }
+//         return ans;
+//     }
+// };
