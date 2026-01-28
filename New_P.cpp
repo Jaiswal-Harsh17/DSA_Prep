@@ -503,3 +503,25 @@
 
 // 2908. Minimum Sum of Mountain Triplets I
 // Code:
+
+
+// 279. Perfect Squares
+// Code:
+// class Solution:
+//     def numSquares(self, n: int) -> int:
+//         def solve(n):
+//             if n == 0:
+//                 return 0
+//             elif n in memo:
+//                 return memo[n]
+//             else:
+//                 # ans = n
+//                 ans = float('inf')
+//                 i = 1
+//                 while ((i*i) <= n):
+//                     ans = min(ans, 1 + solve(n-(i*i)))
+//                     memo[n] = ans
+//                     i+=1
+//                 return ans
+//         memo = {}
+//         return solve(n)
