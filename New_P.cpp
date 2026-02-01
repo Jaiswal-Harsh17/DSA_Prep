@@ -543,3 +543,14 @@
 //         return count;
 //     }
 // };
+
+// 3010. Divide an Array Into Subarrays With Minimum Cost I
+// Code:
+// class Solution {
+// public:
+//     int minimumCost(vector<int>& nums) {
+//         int first = nums[0];
+//         sort(nums.begin() + 1, nums.end());
+//         return first + nums[1] + nums[2];
+//     }
+// };
